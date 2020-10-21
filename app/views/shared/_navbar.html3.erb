@@ -1,0 +1,271 @@
+
+
+<style>
+.navbar-wagon {
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  background: white;
+  transition: all 0.3s ease;
+  height: 45px;
+  padding: 0px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+/* Logo */
+.navbar-wagon-brand img {
+  height: 35px;
+}
+
+/* User Avatar */
+.navbar-wagon .avatar {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+/* Right section */
+.navbar-wagon-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Basic navbar item */
+.navbar-wagon-item {
+  cursor: pointer;
+  padding: 0 0px;
+}
+
+.navbar-wagon-item-cidade {
+  cursor: pointer;
+  padding: 0 20px;
+}
+
+/* Navbar link */
+.navbar-wagon-link {
+  color: #616668;
+  font-size: 14px;
+}
+.navbar-wagon-link:hover {
+  color: #da552f;
+  text-decoration: none;
+}
+
+.navbar-wagon-link-btn {
+  color: white;
+  font-size: 14px;
+  padding: 3px;
+}
+.navbar-wagon-link-btn:hover {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+/* Dropdown menu */
+.navbar-wagon-dropdown-menu {
+  margin-top: 15px;
+  box-shadow: 1px 1px 4px #E6E6E6;
+  border-color: #E6E6E6;
+}
+.navbar-wagon-dropdown-menu li > a {
+  transition: color 0.3s ease;
+  font-weight: lighter !important;
+  color: #999999 !important;
+  font-size: 15px !important;
+  line-height: 22px !important;
+  padding: 10px 20px;
+}
+.navbar-wagon-dropdown-menu li > a:hover {
+  background: transparent !important;
+  color: black !important;
+}
+.navbar-wagon-dropdown-menu:before {
+  content: ' ';
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  right: 10px;
+  top: -6px;
+  background-color: white;
+  transform: rotate(45deg);
+  border-left: 1px solid #E6E6E6;
+  border-top: 1px solid #E6E6E6;
+}
+
+.nav-logo {
+  font-size: 2.5vh;
+  background-color: #F0386B;
+  object-position: center;
+  padding: 5px;
+  color: white;
+  font-family: 'Barriecito', cursive;
+  margin-left: 0px;
+  margin-top: 10px;
+}
+
+</style>
+
+
+
+
+<div class="navbar-wagon">
+  <!-- Logo -->
+  <%= link_to root_path, class: "navbar-wagon-brand" do %>
+    <p class="nav-logo">Entrevista Descomplicada</p>
+  <% end %>
+  <!-- Right Navigation -->
+
+<div class="">  <!-- div para hide de menu bar -->
+
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+    <%= link_to "Blog", root_path, class: "navbar-wagon-item-cidade navbar-wagon-link hide" %>
+    <%= link_to "Vídeos", root_path, class: "navbar-wagon-item-cidade navbar-wagon-link" %>
+    <%= link_to "Contato", root_path, class: "navbar-wagon-item-cidade navbar-wagon-link" %>
+    <%= link_to "Sobre", root_path, class: "navbar-wagon-item-cidade navbar-wagon-link" %>
+
+
+    <% if user_signed_in? %>
+
+      <!-- Links when logged in -->
+      <!-- Avatar with dropdown menu -->
+      <div class="navbar-wagon-item">
+        <div class="dropdown">
+          <%= image_tag current_user.photo.url(:small), class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown"  %>
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+            <li>
+              <% if !current_user.pprofile.nil? %>
+                <%= link_to pprofile_path(current_user.pprofile) do %>
+                  <i class="fa fa-user"></i> <%= t(".profile", default: "Perfil") %>
+                <% end %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to user_path(current_user) do %>
+              <div class="navbar-wagon-link-btn btn btn-danger">
+                <i class="fa fa-cog"></i>  <%= t(".settings", default: "Blog") %>
+              </div>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to destroy_user_session_path, method: :delete do %>
+                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Sair") %>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    <% else %>
+
+      <!-- Login link (when logged out) -->
+      <%= link_to t(".sign_in", default: "Cadastro/Login"), new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link-btn btn btn-danger"%>
+    <% end %>
+  </div>
+
+
+
+
+
+
+  <div class="navbar-wagon-right hidden-md hidden-lg">
+
+
+   <!-- Dropdown list appearing on mobile only -->
+  <div class="hidden-md hidden-lg">
+
+
+    <% if user_signed_in? %>
+      <!-- Avatar with dropdown menu -->
+      <div class="navbar-wagon-item">
+        <div class="dropdown">
+          <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+            <li>
+              <% if !current_user.pprofile.nil? %>
+                <%= link_to pprofile_path(current_user.pprofile) do %>
+                  <i class="fa fa-user"></i> <%= t(".profile", default: "Perfil") %>
+                <% end %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to root_path do %>
+                <i class="fa fa-bullhorn"></i> <%= t(".settings", default: "Blog") %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to root_path do %>
+                <div class="navbar-wagon-link-btn btn btn-danger">
+                  <i class="fa fa-cog"></i>  <%= t(".settings", default: "Vídeos") %>
+                </div>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to root_path do %>
+                <i class="fa fa-info-circle"></i> <%= t(".settings", default: "Contato") %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to root_path do %>
+                <i class="fa fa-info-circle"></i> <%= t(".settings", default: "Sobre") %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to destroy_user_session_path, method: :delete do %>
+                <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Sair") %>
+              <% end %>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+    <% else %>
+
+      <div class="navbar-wagon-item">
+        <div class="dropdown">
+          <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+            <li>
+              <%= link_to new_user_registration_path do %>
+                <div class="navbar-wagon-link-btn btn btn-danger">
+                  <i class="fa fa-cog"></i>  <%= t(".settings", default: "Cadastro/Login") %>
+                </div>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to root_path do %>
+                <i class="fa fa-bullhorn"></i>  <%= t(".settings", default: "Blog") %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to root_path do %>
+                <i class="fa fa-bullhorn"></i>  <%= t(".settings", default: "Vídeos") %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to root_path do %>
+                <i class="fa fa-bullhorn"></i>  <%= t(".settings", default: "Contato") %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to root_path do %>
+                <i class="fa fa-cog"></i>  <%= t(".settings", default: "Sobre") %>
+              <% end %>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    <% end %>
+
+
+  </div>
+
+</div>
+
+</div> <!-- div para hide de menu bar -->
+
+</div>

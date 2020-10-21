@@ -1,0 +1,124 @@
+
+
+<style>
+.photoContainer {
+  width: 100%;
+  height: 40vh;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 0px;
+}
+
+.postframe {
+  padding: 3vh;
+  margin-top: -10vh;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.containerposition {
+  position: relative;
+  margin-top: -2vh;
+}
+
+#my_iFrame{
+height: 400px;
+width: 100%;
+max-width: 800px;
+
+}
+
+
+.iframe-container-post {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+
+}
+
+.iframe-container-post iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
+
+/* 4x3 Aspect Ratio */
+.iframe-container-4x3-post {
+  padding-top: 95%;
+}
+
+</style>
+
+
+<div style="
+background: #0f0c29;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+">
+
+<div class="photoContainer">
+  <img style="object-fit: fill;" src=<%= @post["photo"] %> alt=<%= @post["title"] %>>
+</div>
+
+
+<div class="container" style="position: relative; margin-top: -7vh;" >
+
+
+
+  <div class="postframe">
+
+    <center>
+
+      <%= image_tag "https://salaodebelezadelivery.com.br//franquias/2/21698/editor-html/4213895.png", height: 130 %>
+      <h3 style="font-size: 2vh;">por Thielle Felix | fundadora do Salão de Beleza Delivery</h3>
+      <br>
+      <h2 style="font-size: 2vh;" class="hide"><%= @post["date"].html_safe%></h2>
+      <h1 style="font-size: 4vh;"><%= @post["title"].html_safe%></h1>
+      <br>
+    </center>
+
+
+    <% if !@post["video"].nil? %>
+
+      <h3 style="font-size: 2vh; font-style: italic;">Veja o post completo:</h3>
+      <hr style="margin-top: -0.7vh;">
+      <%= @post["text"].html_safe%>
+      <br>
+        <% if @post["video"] != " " %>
+          <div class="iframe-container-post">
+            <iframe src=<%= @post["video"].html_safe%> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        <% end %>
+
+    <% end %>
+    <br>
+    <br>
+    <p style="color: black; margin-bottom: 0vh; font-size: 2vh; font-style: italic;">Veja como ser aprovado(a) em processos seletivos com os recursos a seguir:</p>
+    <hr style="margin-top: 0vh;">
+
+    <%= link_to inscricoes_encerradas_path do %>
+      <div class="btn btn-dark btn-block" style="margin-top: -0.3vh;"><i class="fas fa-book-open"></i> Formação Salão de Beleza Delivery</div>
+    <% end %>
+    <br>
+
+
+
+
+
+  </div>
+
+  <br>
+  <br>
+  <div style="background-color: white;">
+    <div class="fb-comments" " data-href="https://www.facebook.com/salaodebelezadelivery.com.br" data-width="" data-numposts="10"></div>
+  </div>
+
+</div>
+
+<br>
+<br>
+<br>
+</div>

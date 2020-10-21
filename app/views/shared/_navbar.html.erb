@@ -1,0 +1,244 @@
+
+
+<style>
+.navbar-wagon {
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  background: white;
+  transition: all 0.3s ease;
+  height: 45px;
+  padding: 0px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+/* Logo */
+.navbar-wagon-brand img {
+  height: 35px;
+}
+
+/* User Avatar */
+.navbar-wagon .avatar {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+/* Right section */
+.navbar-wagon-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Basic navbar item */
+.navbar-wagon-item {
+  cursor: pointer;
+  padding: 0 0px;
+}
+
+.navbar-wagon-item-cidade {
+  cursor: pointer;
+  padding: 0 20px;
+}
+
+/* Navbar link */
+.navbar-wagon-link {
+  color: #6E6E6E;
+  font-size: 14px;
+}
+.navbar-wagon-link:hover {
+  color: #da552f;
+  text-decoration: none;
+}
+
+.navbar-wagon-link-btn {
+  color: white;
+  font-size: 14px;
+  padding: 3px;
+}
+.navbar-wagon-link-btn:hover {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+/* Dropdown menu */
+.navbar-wagon-dropdown-menu {
+  margin-top: 15px;
+  box-shadow: 1px 1px 4px #E6E6E6;
+  border-color: #E6E6E6;
+}
+.navbar-wagon-dropdown-menu li > a {
+  transition: color 0.3s ease;
+  font-weight: lighter !important;
+  color: #6E6E6E !important;
+  font-size: 15px !important;
+  line-height: 22px !important;
+  padding: 10px 20px;
+}
+.navbar-wagon-dropdown-menu li > a:hover {
+  background: transparent !important;
+  color: black !important;
+}
+.navbar-wagon-dropdown-menu:before {
+  content: ' ';
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  right: 10px;
+  top: -6px;
+  background-color: white;
+  transform: rotate(45deg);
+  border-left: 1px solid #E6E6E6;
+  border-top: 1px solid #E6E6E6;
+}
+
+.nav-logo {
+  font-size: 2.5vh;
+  background-color: #F0386B;
+  object-position: center;
+  padding: 5px;
+  color: white;
+  font-family: 'Barriecito', cursive;
+  margin-left: 0px;
+  margin-top: 10px;
+}
+
+
+.btn-text-title {
+  color: white;
+  background-color: #F0386B;
+  margin: 0px;
+  margin-left: -20px;
+  font-size: 2.5vh;
+  font-family: 'Barriecito', cursive;
+}
+
+.icon-style-navbar {
+font-size: 3vh;
+padding: 2vh;
+color: gray;
+
+}
+
+</style>
+
+
+
+
+<div class="navbar-wagon">
+  <!-- Logo -->
+
+  <%= link_to root_path, class: "navbar-wagon-brand" do %>
+    <%= image_tag "logoamarelo.png", height: 40 %>
+  <% end %>
+
+  <!-- Right Navigation -->
+
+<div class="">  <!-- div para hide de menu bar -->
+
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+    <a href="https://www.youtube.com/channel/UCSJlrT44ZLIM77Z6oGIGr3Q" target="_blank"><i class="fab fa-youtube-square icon-style-navbar"></i></a>
+    <a href="https://www.facebook.com/salaodebelezadelivery.com.br" target="_blank"><i class="fab fa-facebook-square icon-style-navbar"></i></a>
+    <a href="https://www.instagram.com/thiellefelix/" target="_blank"><i class="fab fa-instagram  icon-style-navbar"></i></a>
+    <a href="https://twitter.com/thiellefelix" target="_blank"><i class="fab fa-twitter icon-style-navbar"></i></a>
+    <a href="https://br.linkedin.com/in/thielle" target="_blank"><i class="fab fa-linkedin icon-style-navbar"></i></a>
+    <%= link_to "Blog", root_path, class: "navbar-wagon-item-cidade navbar-wagon-link" %>
+    <%#= link_to "Vídeos", root_path, class: "navbar-wagon-item-cidade navbar-wagon-link" %>
+    <%#= link_to "Portal de vagas", portal_de_vagas_path, class: "navbar-wagon-item-cidade navbar-wagon-link" %>
+    <%#= link_to "Recursos", curriculo_campeao_path, class: "navbar-wagon-item-cidade navbar-wagon-link" %>
+    <%#= link_to "Contato", root_path, class: "navbar-wagon-item-cidade navbar-wagon-link hide" %>
+    <%= link_to "Sobre", sobre_path, class: "navbar-wagon-item-cidade navbar-wagon-link" %>
+    <% if user_signed_in? %>
+      <%= link_to destroy_user_session_path, method: :delete do %>
+        <i class="fas fa-user-check"></i>  <%= t(".sign_out", default: "Sair") %>
+      <% end %>
+    <% end %>
+
+  </div>
+
+
+
+  <div class="navbar-wagon-right hidden-md hidden-lg">
+
+   <!-- Dropdown list appearing on mobile only -->
+  <div class="hidden-md hidden-lg">
+      <div class="navbar-wagon-item">
+        <div class="dropdown">
+          <i class="fa fa-bars" data-toggle="dropdown"></i>
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+            <li class="hide">
+              <%= link_to root_path do %>
+                <i class="fa fa-bullhorn"></i>  <%= t(".settings", default: "Blog") %>
+              <% end %>
+            </li>
+            <li class="hide">
+              <%= link_to root_path do %>
+                <i class="fa fa-bullhorn"></i>  <%= t(".settings", default: "Vídeos") %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to portal_de_vagas_path do %>
+                <i class="fa fa-bullhorn"></i>  <%= t(".settings", default: "Portal de vagas") %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to curriculo_campeao_path do %>
+                <i class="fa fa-bullhorn"></i>  <%= t(".settings", default: "Recursos") %>
+              <% end %>
+            </li>
+            <li class="hide">
+              <%= link_to root_path do %>
+                <i class="fa fa-bullhorn"></i>  <%= t(".settings", default: "Contato") %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to sobre_path do %>
+                <i class="fa fa-cog"></i>  <%= t(".settings", default: "Sobre") %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "https://www.youtube.com/channel/UCSJlrT44ZLIM77Z6oGIGr3Q" do %>
+                <i class="fab fa-youtube-square"></i>  <%= t(".settings", default: "YouTube") %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "https://www.facebook.com/salaodebelezadelivery.com.br" do %>
+                <i class="fab fa-facebook-square"></i>  <%= t(".settings", default: "Facebook") %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "https://www.instagram.com/thiellefelix/" do %>
+                <i class="fab fa-instagram "></i>  <%= t(".settings", default: "Instagram") %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "https://br.linkedin.com/in/thielle" do %>
+                <i class="fab fa-linkedin "></i>  <%= t(".settings", default: "LinkedIn") %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "https://twitter.com/thiellefelix" do %>
+                <i class="fab fa-twitter "></i>  <%= t(".settings", default: "Twitter") %>
+              <% end %>
+            </li>
+            <% if user_signed_in? %>
+            <li>
+              <%= link_to destroy_user_session_path, method: :delete do %>
+                <i class="fas fa-user-check"></i>  <%= t(".sign_out", default: "Sair") %>
+              <% end %>
+            </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+  </div>
+
+</div>
+
+</div> <!-- div para hide de menu bar -->
+
+</div>

@@ -1,0 +1,67 @@
+<!-- loop de blog posts ********************* -->
+
+<style>
+.btn-text {
+  color: white;
+  background-color: #F0386B;
+  margin: 20px;
+  font-size: 2.5vh;
+}
+
+.zoom:hover {
+  transform: scale(1.02);
+}
+
+</style>
+
+
+
+<div style="background-color: black;">
+
+<div class="container">
+  <br>
+  <br>
+  <p style="font-style: italic; font-weight: bold; font-size: 2.5vh; color: white;">Últimos posts</p>
+  <hr/ style="margin-top: -1vh; margin-bottom: -1vh;">
+
+<!-- loop de blog posts ***************** -->
+<div class="row">
+  <% @secondposts.each_with_index do |secondpost, index|%>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <% link = secondpost[1]["link"]%>
+      <% photo = secondpost[1]["photo"]%>
+      <% title = secondpost[1]["title"]%>
+      <% category = secondpost[1]["category"]%>
+      <% description = secondpost[1]["description"]%>
+      <% date = secondpost[1]["date"]%>
+      <br>
+
+<!-- teste style ***************** -->
+      <%= link_to link, {:style => 'text-decoration: none!important; color:black;'} do %>
+          <div style="background-color: white; border-radius: 3px;" class="zoom">
+          <div style="width: 100%;">
+            <img style="width: 100%; min-height: 30vh;; object-fit: cover; border-radius: 3px;" src=<%= photo %> alt=<%= title %>>
+          </div>
+          <div style="margin-left: 1vh; margin-right: 1vw; padding: 1vh;">
+            <h3 style="font-size: 1.7vh;" class=""><%= date%></h3>
+            <h4 style="font-size: 1.7vh; color: grey;"><%= category.upcase%></h4>
+            <h2 style="font-size: 3vh; margin-top: 0vh; font-weight: bold;"><%= title %></h2>
+            <h4 style="font-size: 2vh; margin-top: 3vh; "><%= description %></h4>
+            <br>
+          </div>
+          </div>
+
+      <% end %>
+<!-- teste style ***************** -->
+
+    </div>
+  <% end %>
+</div>
+<br>
+<br>
+</div>
+</div>
+<!--  fim: loop de blog posts ********************* -->
+
+
+

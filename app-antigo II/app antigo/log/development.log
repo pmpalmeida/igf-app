@@ -1,0 +1,356 @@
+Started GET "/" for ::1 at 2020-06-27 14:54:32 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/pedrompasilva/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/pedrompasilva/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb (2.3ms)
+Completed 200 OK in 137ms (Views: 6.2ms)
+
+
+Started GET "/" for ::1 at 2020-06-27 14:59:18 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/pedrompasilva/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/pedrompasilva/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/railties-5.1.7/lib/rails/templates/rails/welcome/index.html.erb (3.0ms)
+Completed 200 OK in 7ms (Views: 4.7ms)
+
+
+Started GET "/" for ::1 at 2020-06-27 15:06:49 -0300
+  
+AbstractController::ActionNotFound (The action 'home' could not be found for PagesController):
+  
+actionpack (5.1.7) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.7) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.7) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.7) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.7) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.7) lib/action_dispatch/routing/route_set.rb:844:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.7) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.7) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.7) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-06-27 15:08:01 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 388ms (Views: 387.3ms)
+
+
+Started GET "/sobre" for ::1 at 2020-06-27 15:09:45 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/sobre"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/obrigado" for ::1 at 2020-06-27 15:19:34 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/obrigado"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-06-27 15:19:43 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 20.3ms)
+
+
+Started GET "/obrigado" for ::1 at 2020-06-27 15:19:49 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/obrigado"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-06-27 15:21:32 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 18ms (Views: 17.3ms)
+
+
+Started GET "/obrigado" for ::1 at 2020-06-27 15:21:39 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/obrigado"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/pages/obrigado" for ::1 at 2020-06-27 15:22:03 -0300
+Processing by PagesController#obrigado as HTML
+  Rendering pages/obrigado.html.erb within layouts/application
+  Rendered pages/obrigado.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 17.3ms)
+
+
+Started GET "/" for ::1 at 2020-06-27 15:31:18 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (8.1ms)
+Completed 500 Internal Server Error in 14ms
+
+
+  
+ActionView::Template::Error (The asset "99CV.png" is not present in the asset pipeline.):
+    108:   <!-- <img id="videoTrailer" style="object-fit: cover; height: 70vh; opacity: 0.8;" src="/assets/background2.gif" alt="sobre/about"> -->
+    109:   <div style="position: relative; margin-top: -65vh;">
+    110:     <div class="container">
+    111:       <%= image_tag "99CV.png", class: 'img-responsive center-block fit-image', alt: "Entrevista Descomplicada - Curso 99CV" %>
+    112:       <h1 class="title-text">Consiga a vaga de emprego com um currículo campeão</h1>
+    113:       <br>
+    114: 
+  
+app/views/pages/home.html.erb:111:in `_app_views_pages_home_html_erb__2752878383535794828_70365370067580'
+Started GET "/" for ::1 at 2020-06-27 15:32:01 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 9ms
+
+
+  
+ActionView::Template::Error (The asset "99CV.png" is not present in the asset pipeline.):
+    144:   <div style="background-color: white; border-radius: 3px; margin: 1vw; max-width: 400px;">
+    145:     <br>
+    146:     <br>
+    147:     <%= image_tag "99CV.png", class: 'img-responsive center-block fit-image', style: 'height: 10vh;', alt: "Entrevista Descomplicada - Curso 99CV" %>
+    148:     <p style="padding-top: 2vh;">R$ 99 ou em até 6 x de R$ 17,97 </p>
+    149:     <%= link_to "https://pay.hotmart.com/C32527072U?checkoutMode=0&bid=1590541859524" do %>
+    150:       <div class="btn btn-danger btn-text-curso">QUERO ME DESTACAR DA COMPETIÇÃO</div>
+  
+app/views/pages/home.html.erb:147:in `_app_views_pages_home_html_erb__2752878383535794828_70365402037340'
+Started GET "/" for ::1 at 2020-06-27 15:32:20 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 5ms
+
+
+  
+ActionView::Template::Error (The asset "cvcampeao.png" is not present in the asset pipeline.):
+    175:           <h2 style="font-size: 4vh;"><i class="fas fa-search"></i> Revisão de Currículo</h2>
+    176:           <p>O time de especialistas da Entrevista Descomplicada vai <strong>revisar o seu currículo</strong> de forma a fazer ele se destacar da multidão.</p>
+    177:           <div style="">
+    178:             <%= image_tag "cvcampeao.png", class: 'img-responsive center-block fit-image img-selection', alt: "Entrevista Descomplicada - Curso 99CV" %>
+    179:           </div>
+    180: 
+    181:         </div>
+  
+app/views/pages/home.html.erb:178:in `_app_views_pages_home_html_erb__2752878383535794828_70365361967720'
+Started GET "/" for ::1 at 2020-06-27 15:32:35 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 5ms
+
+
+  
+ActionView::Template::Error (The asset "callcenter.jpeg" is not present in the asset pipeline.):
+    188:           <h2 style="font-size: 4vh;"><i class="far fa-question-circle"></i></i> Plantão de Dúvidas</h2>
+    189:           <p>Plantões online pra discutir <strong>dúvidas</strong> e trocar experiências.</p>
+    190:           <div style="">
+    191:             <%= image_tag "callcenter.jpeg", class: 'img-responsive center-block fit-image img-selection', alt: "Entrevista Descomplicada - Curso 99CV" %>
+    192:           </div>
+    193: 
+    194:         </div>
+  
+app/views/pages/home.html.erb:191:in `_app_views_pages_home_html_erb__2752878383535794828_70365405955820'
+Started GET "/" for ::1 at 2020-06-27 15:32:50 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 5ms
+
+
+  
+ActionView::Template::Error (The asset "screecapcurso.png" is not present in the asset pipeline.):
+    201:           <h2 style="font-size: 4vh;"><i class="fas fa-desktop"></i></i> Conteúdo Exclusivo</h2>
+    202:           <p>Conteúdo exclusivo e <strong>100% online</strong> pra você assistir no celular ou computador aonde estiver.</p>
+    203:           <div style="">
+    204:             <%= image_tag "screecapcurso.png", class: 'img-responsive center-block fit-image img-selection', alt: "Entrevista Descomplicada - Curso 99CV" %>
+    205:           </div>
+    206: 
+    207:         </div>
+  
+app/views/pages/home.html.erb:204:in `_app_views_pages_home_html_erb__2752878383535794828_70365363328260'
+Started GET "/" for ::1 at 2020-06-27 15:33:00 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 5ms
+
+
+  
+ActionView::Template::Error (Missing partial shared/_porquefunciona with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/pedrompasilva/sbd-app/app/views"
+):
+    220: 
+    221: 
+    222: 
+    223: <%= render 'shared/porquefunciona' %>
+    224: 
+    225: <%= render 'shared/depoimentos' %>
+    226: 
+  
+app/views/pages/home.html.erb:223:in `_app_views_pages_home_html_erb__2752878383535794828_70365404440880'
+Started GET "/" for ::1 at 2020-06-27 15:33:08 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 17ms (Views: 16.2ms)
+
+
+Started GET "/" for ::1 at 2020-06-27 15:35:07 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 13ms (Views: 11.6ms)
+
+
+Started GET "/" for ::1 at 2020-06-28 13:22:27 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 341ms (Views: 181.0ms)
+
+
+Started GET "/" for ::1 at 2020-06-28 13:23:49 -0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 324ms (Views: 169.3ms)
+
+

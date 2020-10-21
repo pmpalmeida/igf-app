@@ -1,0 +1,224 @@
+
+
+
+
+<style>
+/* Play with this value */
+@import url('https://fonts.googleapis.com/css?family=Barriecito&display=swap');
+
+.videoContainer {
+
+background: #373B44;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #9a1278, #003fff);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #9a1278, #003fff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  width: 100%;
+  height: 55vh;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 0px;
+}
+
+#videoTrailer {
+  min-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
+}
+
+.title-text {
+  font-family: 'Barriecito', cursive;
+  color: white;
+  font-size: 6vh;
+
+  padding: 0.5vh;
+  border-radius: 3px;
+  display:inline-block;
+  padding-left: 1.5vh;
+  padding-right: 1.5vh;
+
+}
+
+.btn-text {
+  color: white;
+  background-color: #F0386B;
+  margin: 20px;
+  font-size: 2.5vh;
+  font-family: 'Barriecito', cursive;
+}
+
+.zoom:hover {
+  transform: scale(1.02);
+}
+
+
+.icon-font-home {
+color: black;
+font-weight: bold;
+margin-top: 2vh;
+font-size: 4vh;
+font-family: 'Barriecito';
+font-weight: bold;
+}
+
+.fit-image{
+  max-height: 35vh;
+}
+
+</style>
+
+
+<div style="background-color: #F7F7F7;">
+
+
+<div class="videoContainer">
+
+  <img id="videoTrailer" style="object-fit: cover; height: 60vh; opacity: 1;" src="/assets/background2.gif" alt="sobre/about">
+
+  <div style="position: relative; margin-top: -45vh;">
+    <div class="container">
+    <%= image_tag "logofim.png", class: 'img-responsive center-block fit-image', alt: "Entrevista Descomplicada" %> <br>
+
+    <h2 class="" style="font-size: 2.5vh; margin: 0.2vh; margin-top: -2vh; color: white;">Aprenda os segredos das entrevistas de emprego e conquiste a vaga de trabalho</h2>
+    </div>
+      <div style="display: flex; align-items: center; justify-content: center;">
+        <a href="" class="btn btn-text hide">Inscreva-se</a>
+        <a href="" class="btn btn-text hide">Saiba mais</a>
+      </div>
+  </div>
+</div>
+
+<br>
+<br>
+
+<div class="container" style="background-color: white; padding: 3vh; max-width: 95%; border-radius: 3px; margin-top: -10vh;  z-index: 10; opacity: 1; position:relative;">
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <center>
+        <div style="margin-bottom: 3vh;">
+          <i class="fas fa-piggy-bank" style="font-size: 8vh;"></i>
+          <h2 class="icon-font-home">Grátis</h2>
+          <p style="font-size: 2vh;"><strong>100% grátis</strong>, sempre um conteúdo diferente nas principais redes sociais</p>
+        </div>
+      </center>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <center>
+        <div style="margin-bottom: 3vh;">
+          <i class="fas fa-vial" style="font-size: 8vh;"></i>
+          <h2 class="icon-font-home">Simples</h2>
+          <p style="font-size: 2vh;"><strong>Sem enrolação</strong>, dicas simples pra você se dar bem na entrevista de emprego</p>
+        </div>
+      </center>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <center>
+        <div style="margin-bottom: 3vh;">
+          <i class="fas fa-tachometer-alt" style="font-size: 8vh;"></i>
+          <h2 class="icon-font-home">Funcional</h2>
+          <p style="font-size: 2vh;">Dicas que realmente <strong>funcionam</strong> em entrevistas de emprego</p>
+        </div>
+      </center>
+    </div>
+  </div>
+
+</div>
+
+
+<br>
+<br>
+
+<div class="container">
+  <p style="font-style: italic; font-weight: bold; font-size: 2.5vh;">Últimos posts</p>
+  <hr/ style="margin-top: -1vh; margin-bottom: -1vh;">
+
+<!-- loop de blog posts ***************** -->
+<div class="row">
+  <% @secondposts.each_with_index do |secondpost, index|%>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <% link = secondpost[1]["link"]%>
+      <% photo = secondpost[1]["photo"]%>
+      <% title = secondpost[1]["title"]%>
+      <% category = secondpost[1]["category"]%>
+      <% description = secondpost[1]["description"]%>
+      <% date = secondpost[1]["date"]%>
+      <br>
+
+<!-- teste style ***************** -->
+      <%= link_to link, {:style => 'text-decoration: none!important; color:black;'} do %>
+          <div style="background-color: white; border-radius: 3px;" class="zoom">
+          <div style="width: 100%;">
+            <img style="width: 100%; min-height: 30vh;; object-fit: cover; border-radius: 3px;" src=<%= photo %> alt=<%= title %>>
+          </div>
+          <div style="margin-left: 1vh; margin-right: 1vw; padding: 1vh;">
+            <h3 style="font-size: 1.7vh;"><%= date%></h3>
+            <h4 style="font-size: 1.7vh; color: grey;"><%= category.upcase%></h4>
+            <h2 style="font-size: 3vh; margin-top: 0vh; font-weight: bold;"><%= title %></h2>
+            <h4 style="font-size: 2vh; margin-top: 3vh; "><%= description %></h4>
+            <br>
+          </div>
+          </div>
+
+      <% end %>
+<!-- teste style ***************** -->
+
+    </div>
+  <% end %>
+</div>
+<!--  fim: loop de blog posts ********************* -->
+
+<br>
+<br>
+</div>
+
+
+<!--  logo + explicacao ********************* -->
+<div style="background-color: white; padding: 4vh;">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-md-4">
+      <%= image_tag "logo.png",class: "img-responsive center-block max-size" %>
+    </div>
+
+    <div class="col-xs-12 col-sm-8 col-md-8" style="align-items: left; ">
+      <br>
+      <h2 style="font-size: 3.5vh;">SOBRE O ENTREVISTA DESCOMPLICADA</h2>
+      <p style="font-size: 2.5vh;">O projeto <strong>Entrevista Descomplicada</strong> nasceu da insatisfação com os processos de seleção das grandes empresas. Cada vez mais nós (candidatos) estamos mais preparados e ainda assim recebemos um NÃO em entrevistas sem nenhum tipo de explicação. Aqui o candidato vai receber <strong>informações em detalhe sobre como se preparar</strong> e conseguir a tão sonhada vaga de trabalho. </p>
+    </div>
+  </div>
+</div>
+<!--  logo + explicacao | FIM ********************* -->
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

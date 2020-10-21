@@ -1,0 +1,68 @@
+
+
+
+<style>
+  .wrapper-devise {
+    background: #0f0c29;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+color: white;
+  }
+
+  .form-actions {
+    background-color: #F0386B;
+    border-radius: 3px;
+    max-width: 100px;
+    text-align: center;
+    color: white;
+
+  }
+
+</style>
+
+
+
+<div class="wrapper-devise">
+<div class="container">
+<div class="row">
+<div class="col-xs-12 col-sm-offset-3 col-sm-6">
+
+
+
+<br>
+<br>
+<%= image_tag "logofim.png", class: 'img-responsive center-block', style: 'max-height: 100px;', alt: "Entrevista Descomplicada" %> <br>
+<center><h2>Login no portal de vagas</h2></center>
+
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="form-inputs">
+    <%= f.input :email,
+                required: false,
+                autofocus: true,
+                input_html: { autocomplete: "email" } %>
+    <%= f.input :password,
+                required: false,
+                input_html: { autocomplete: "current-password" } %>
+
+  </div>
+
+  <center>
+    <div class="form-actions">
+      <%= f.button :submit, "Login" %>
+    </div>
+  </center>
+
+<% end %>
+
+<br>
+
+<%= render "devise/shared/links" %>
+<br>
+<br>
+<br>
+
+
+</div>
+</div>
+</div>
+</div>

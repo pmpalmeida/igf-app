@@ -1,0 +1,166 @@
+
+
+<style>
+.photoContainer {
+  width: 100%;
+  height: 40vh;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 0px;
+}
+
+.postframe {
+  padding: 3vh;
+  margin-top: -10vh;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.containerposition {
+  position: relative;
+  margin-top: -2vh;
+}
+
+#my_iFrame{
+height: 400px;
+width: 100%;
+max-width: 800px;
+
+}
+
+
+.iframe-container-post {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+
+}
+
+.iframe-container-post iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
+
+/* 4x3 Aspect Ratio */
+.iframe-container-4x3-post {
+  padding-top: 95%;
+}
+
+
+.page-background {
+  background: #0f0c29;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.img-size-logo-vaga-portal {
+  max-height: 150px;
+}
+
+.divborder {
+  border-style: solid;
+  border-width: thin;
+  border-color: black;
+  margin: 4px;
+  color: black;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+.divborder:hover {
+  background-color: black;
+  border-color: black;
+}
+
+</style>
+
+
+<div class="page-background">
+  <div class="photoContainer">
+    <br>
+
+    <%= image_tag @vaga["logo"], class: 'img-responsive center-block fit-image-courses img-size-logo-vaga-portal', alt: "Curso preparatório para entrevista 99CV" %> <br>
+
+    <h1 style="font-size: 4vh; color: white; margin-top: -0.5vh;"><%= @vaga["titulo"] %> </h1>
+  </div>
+
+  <div class="container" style="background: white; border-radius: 3px; padding: 2vh;">
+
+    <h2 style="font-size: 3vh;">Empresa:</h2>
+    <p><%= @vaga["empresa"] %></p>
+
+    <h2 style="font-size: 3vh;">Tipo da vaga:</h2>
+    <p><%= @vaga["tipo"] %></p>
+
+    <h2 style="font-size: 3vh;">Título da vaga:</h2>
+    <p><%= @vaga["titulo"] %></p>
+
+    <h2 style="font-size: 3vh;">Datas do processo seletivo:</h2>
+    <p>Data de início: <%= @vaga["data_inicio"] %></p>
+    <p>Data de final: <%= @vaga["data_fim"] %></p>
+
+    <h2 style="font-size: 3vh;">Descrição da vaga</h2>
+    <p><%= @vaga["descricao_completa"] %></p>
+
+    <h2 style="font-size: 3vh;">Informações para inscrição</h2>
+    <p>Inscrição através do site:</p>
+    <p><%= @vaga["site"] %></p>
+    <br>
+
+    <%= link_to @vaga["site"] do %>
+      <div class="btn btn-danger btn-block" style="margin-top: -0.3vh;">Fazer inscrição</div>
+    <% end %>
+
+    <br>
+    <br>
+
+    <div class="container">
+      <p style="color: black; margin-bottom: 0vh; font-size: 2vh; font-style: italic;">Veja como conseguir essa vaga acessando:</p>
+      <hr style="margin-top: 0vh;">
+
+      <%= link_to inscricoes_encerradas_path do %>
+        <div class="btn btn-dark btn-block" style="margin-top: -0.3vh;"><i class="fas fa-book-open"></i> Cursos preparatórios para entrevista</div>
+      <% end %>
+      <br>
+
+      <%= link_to dicas_de_entrevista_path do %>
+        <div class="btn btn-dark btn-block" style="margin-top: -0.3vh;"><i class="fas fa-wrench"></i> Dicas de entrevista</div>
+      <% end %>
+    </div>
+
+    <br>
+    <br>
+  </div>
+
+  <br>
+  <br>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

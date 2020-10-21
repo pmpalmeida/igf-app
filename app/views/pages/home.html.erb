@@ -1,0 +1,149 @@
+
+
+
+
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Barriecito&display=swap');
+
+.dot-number {
+  font-family: 'Barriecito', cursive;
+  color: white;
+  font-size: 6vh;
+  background: #F0386B;
+  padding: 2vh;
+  display:inline-block;
+  margin-bottom: -1vh;
+  margin-top: 1vh;
+  height: 90px;
+  width: 90px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  background: black;
+}
+
+.dot-text {
+  padding: 2vw;
+  font-size: 2vh;
+  max-width: 80vw;
+  color: white;
+  margin-top: -2vh;
+}
+
+.background {
+background-color: #0e5f99;
+background-image: url(<%= asset_path 'thielleback.jpeg' %>);
+background-color: #F4F4F2;
+background-attachment: fixed;
+background-size: cover;
+}
+
+
+
+
+.round-img {
+  height: 250px;
+  border-radius: 50%
+}
+</style>
+
+
+<div class="background">
+<div style="background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,0.9) 0%, rgba(58,57,131,0.8164040616246498) 52%, rgba(51,137,154,0.9) 100%); border-radius: 3px;">
+
+
+  <div class="container">
+  <br>
+  <br>
+  <br>
+  <!--TITLE-->
+  <div style="position: relative; color: white;">
+    <div class="container">
+      <center>
+        <%= image_tag "logoamarelo.png", class: 'img-responsive center-block round-img', alt: "Entrevista Descomplicada" %>
+        <h1 class="" style="font-size: 3vh; margin: 2vh;">Tranforme seu salão de beleza em um negócio sem limites</h1>
+        <hr style="max-width: 400px;">
+      </center>
+    </div>
+    <br>
+    <!-- CARROUSEL VAGAS ***************** -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm" style="margin: 5px; color: white;">
+          <center>
+            <i class="fas fa-calendar-alt" style="font-size: 6vh; margin-bottom: 2.5vh;"></i>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem </p>
+          </center>
+        </div>
+
+        <div class="col-sm" style="margin: 5px; color: white;">
+          <center>
+            <i class="fas fa-calendar-alt" style="font-size: 6vh; margin-bottom: 2.5vh;"></i>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem </p>
+          </center>
+        </div>
+
+        <div class="col-sm" style="margin: 5px; color: white;">
+          <center>
+            <i class="fas fa-calendar-alt" style="font-size: 6vh; margin-bottom: 2.5vh;"></i>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem </p>
+          </center>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CARROUSEL VAGAS FIM ***************** -->
+    <br>
+  </div>
+  <!-- TITLE END-->
+  </div>
+
+<br>
+<br>
+</div>
+</div>
+
+
+<%= render 'shared/depoimentos' %>
+
+<%= render 'shared/blogposts' %>
+
+<%= render 'shared/quemsomos' %>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

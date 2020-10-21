@@ -1,0 +1,172 @@
+
+
+
+
+<style>
+.videoContainer {
+  background: #373B44;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #9a1278, #003fff);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #9a1278, #003fff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  width: 100%;
+  height: 70vh;
+
+  overflow: hidden;
+  margin-top: 0px;
+}
+
+#videoTrailer {
+  min-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
+  object-fit: cover;
+  height: 70vh;
+  opacity: 1;
+}
+
+.title-text {
+  color: white;
+  font-size: 3.5vh;
+  padding: 0.5vh;
+  display:inline-block;
+  padding-left: 1.5vh;
+  padding-right: 1.5vh;
+  margin-top: 1vh;
+
+}
+
+.paragraph-text {
+  margin-left: 0.2vh;
+  margin-right: 0.2vh;
+  color: white;
+}
+
+.seealso {
+  color: white;
+  margin-bottom: 0vh;
+  font-size: 2vh;
+  font-style: italic;
+}
+
+
+
+.btn-text {
+  color: white;
+  background-color: #F0386B;
+  margin: 20px;
+  font-size: 2.5vh;
+
+}
+
+.zoom:hover {
+  transform: scale(1.02);
+}
+
+.link-style-obrigado {
+
+  color: black;
+  font-size: 5vh;
+  padding: 2vh;
+  margin-top: 0vh;
+}
+
+.img-size-logo {
+  max-height: 120px;
+}
+
+.divborder {
+  border-style: solid;
+  border-width: thin;
+  border-color: white;
+  margin: 4px;
+  color: white;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+.divborder:hover {
+  background-color: black;
+  border-color: black;
+}
+
+.textdivborder {
+  margin: 0 auto;
+  padding: 2px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+</style>
+
+
+<div class="videoContainer">
+  <img id="videoTrailer" src="/assets/background2.gif" alt="sobre/about">
+  <div style="position: relative; margin-top: -65vh;">
+    <div class="container">
+      <center>
+        <%= image_tag "logofim.png", class: 'img-responsive center-block fit-image img-size-logo' , alt: "Entrevista Descomplicada" %>
+        <h1 class="title-text">Email recebido</h1>
+        <p class="paragraph-text" style="font-size: 2.5vh;">Assim que abrirmos a nova turma dos nossos cursos te avisaremos!! :)
+        <p class="paragraph-text" style="font-size: 1.5vh;">Grande abraço <br> Zé Ricardo | Co-fundador da Entrevista Descomplicada </p>
+      </center>
+      <br>
+
+      <div class="container">
+        <p class="seealso" >Enquanto isso veja também:</p>
+        <%= link_to portal_de_vagas_path do %>
+          <div class="divborder">
+          <p class="textdivborder"><i class="fas fa-laptop"></i>        PORTAL DE VAGAS</p>
+          </div>
+          <br>
+        <% end %>
+        <%= link_to dicas_de_entrevista_path do %>
+          <div class="divborder">
+          <p class="textdivborder"><i class="fas fa-wrench"></i>        DICAS DE ENTREVISTA</p>
+          </div>
+          <br>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<%= render 'shared/perfilsocial' %>
+
+<%= render 'shared/depoimentos' %>
+
+<%= render 'shared/quemsomos' %>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
