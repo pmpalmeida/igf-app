@@ -16,7 +16,7 @@ class PagesController < ApplicationController
   end
 
   def obrigado
-    redirect_to(root_path)
+    #redirect_to(root_path)
   end
 
   def curriculocampeao
