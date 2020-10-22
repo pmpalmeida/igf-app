@@ -72,8 +72,8 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+
 
     <center>
 
-      <%= image_tag "https://salaodebelezadelivery.com.br//franquias/2/21698/editor-html/4213895.png", height: 130 %>
-      <h3 style="font-size: 2vh;">por Thielle Felix | fundadora do Salão de Beleza Delivery</h3>
+      <%= image_tag "igf-logo.png", height: 130 %>
+      <h3 style="font-size: 2vh;">por Felipe Dias | co-fundador do IGF</h3>
       <br>
       <h2 style="font-size: 2vh;" class="hide"><%= @post["date"].html_safe%></h2>
       <h1 style="font-size: 4vh;"><%= @post["title"].html_safe%></h1>
@@ -96,12 +96,14 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+
     <% end %>
     <br>
     <br>
-    <p style="color: black; margin-bottom: 0vh; font-size: 2vh; font-style: italic;">Veja como ser aprovado(a) em processos seletivos com os recursos a seguir:</p>
+    <p style="color: black; margin-bottom: 0vh; font-size: 2vh; font-style: italic;">Gostaria de se tornar um planejador financeiro? Saiba mais no link abaixo:</p>
     <hr style="margin-top: 0vh;">
 
-    <%= link_to inscricoes_encerradas_path do %>
-      <div class="btn btn-dark btn-block" style="margin-top: -0.3vh;"><i class="fas fa-book-open"></i> Formação Salão de Beleza Delivery</div>
-    <% end %>
+    <center>
+      <%= link_to inscricoes_encerradas_path do %>
+        <div class="btn btn-danger btn-block" style="margin-top: -0.3vh; max-width: 600px;"><i class="fas fa-book-open"></i> Quero me tornar um planejador financeiro</div>
+      <% end %>
+    </center>
     <br>
 
 
