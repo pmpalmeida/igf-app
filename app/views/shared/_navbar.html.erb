@@ -146,12 +146,15 @@ color: gray;
     <a href="https://www.instagram.com/igf_planejadores/" target="_blank"><i class="fab fa-instagram  icon-style-navbar"></i></a>
     <a href="https://twitter.com/thiellefelix" target="_blank"><i class="fab fa-twitter icon-style-navbar hide"></i></a>
     <a href="https://br.linkedin.com/in/thielle" target="_blank"><i class="fab fa-linkedin icon-style-navbar hide"></i></a>
-    <%= link_to "Blog", root_path, class: "navbar-wagon-item-cidade navbar-wagon-link hide" %>
+    <%= link_to "Blog", blog_posts_path, class: "navbar-wagon-item-cidade navbar-wagon-link" %>
+    <%= link_to "Cursos", inscricoes_encerradas_path, class: "navbar-wagon-item-cidade navbar-wagon-link" %>
+    <%= link_to "Sobre", sobre_path, class: "navbar-wagon-item-cidade navbar-wagon-link" %>
+
     <%#= link_to "Vídeos", root_path, class: "navbar-wagon-item-cidade navbar-wagon-link" %>
     <%#= link_to "Portal de vagas", portal_de_vagas_path, class: "navbar-wagon-item-cidade navbar-wagon-link" %>
     <%#= link_to "Recursos", curriculo_campeao_path, class: "navbar-wagon-item-cidade navbar-wagon-link" %>
     <%#= link_to "Contato", root_path, class: "navbar-wagon-item-cidade navbar-wagon-link hide" %>
-    <%= link_to "Sobre", sobre_path, class: "navbar-wagon-item-cidade navbar-wagon-link" %>
+
     <% if user_signed_in? %>
       <%= link_to destroy_user_session_path, method: :delete do %>
         <i class="fas fa-user-check"></i>  <%= t(".sign_out", default: "Sair") %>
@@ -170,14 +173,14 @@ color: gray;
         <div class="dropdown">
           <i class="fa fa-bars" data-toggle="dropdown"></i>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-            <li class="hide">
-              <%= link_to root_path do %>
+            <li class="">
+              <%= link_to blog_posts_path do %>
                 <i class="fa fa-bullhorn"></i>  <%= t(".settings", default: "Blog") %>
               <% end %>
             </li>
-            <li class="hide">
-              <%= link_to root_path do %>
-                <i class="fa fa-bullhorn"></i>  <%= t(".settings", default: "Vídeos") %>
+            <li class="">
+              <%= link_to inscricoes_encerradas_path do %>
+                <i class="fa fa-bullhorn"></i>  <%= t(".settings", default: "Cursos") %>
               <% end %>
             </li>
             <li>
@@ -195,7 +198,7 @@ color: gray;
                 <i class="fa fa-bullhorn"></i>  <%= t(".settings", default: "Contato") %>
               <% end %>
             </li>
-            <li>
+            <li class="hide">
               <%= link_to sobre_path do %>
                 <i class="fa fa-cog"></i>  <%= t(".settings", default: "Sobre") %>
               <% end %>

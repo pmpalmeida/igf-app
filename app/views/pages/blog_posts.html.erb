@@ -1,13 +1,6 @@
 
 
-
-
-
-
 <style>
-
-@import url('https://fonts.googleapis.com/css?family=Barriecito&display=swap');
-
 .dot-number {
   font-family: 'Barriecito', cursive;
   color: white;
@@ -60,7 +53,7 @@ background: linear-gradient(90deg, rgba(2,0,36,0.9) 0%, rgba(58,57,131,0.8164040
     <div class="container">
       <center>
         <%= image_tag "igf-logo.png", class: 'img-responsive center-block round-img', alt: "Instituto Guia Financeiro - IGF" %>
-        <h1 class="" style="font-size: 3vh; margin: 2vh;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto impedit esse, similique error sed recusandae nostrum aliquid beatae aperiam ullam natus repellendus, accusantium, commodi dicta, eaque consequuntur voluptatibus est non!</h1>
+        <h1 class="" style="font-size: 3vh; margin: 2vh;">Últimos artigos do blog Ser Planejador</h1>
 
         <!-- DATA-->
         <div style="color: white;">
@@ -80,26 +73,16 @@ background: linear-gradient(90deg, rgba(2,0,36,0.9) 0%, rgba(58,57,131,0.8164040
 </div>
 </div>
 
-
-
-
-<div style="background-color: #F7F7F7; padding: 2vh; margin-top: -20px;">
-  <div class="container" style="z-index: 1;">
-  <br>
-  <center>
-    <p style="font-size: 3vh;">Venha também fazer parte dessa comunidade que cresce dia após dia</p>
-    <p style="font-size: 2vh;">Inscreva-se 100% grátis</p>
-    <script async data-uid="ccda067b11" src="https://dedicated-experimenter-5056.ck.page/ccda067b11/index.js"></script>
-  </center>
-
-  </div>
-  <br>
 </div>
 
+<%= render 'shared/blogposts' %>
+<br>
 
-<%= render 'shared/quemsomos'%>
+<%= render 'shared/perfilsocial' %>
 
-<%= render 'shared/depoimentos'%>
+<%= render 'shared/quemsomos' %>
+
+
 
 
 

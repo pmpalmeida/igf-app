@@ -34,7 +34,7 @@ Rails.application.routes.draw do
   get "lista-de-vagas", to: 'pages#lista_de_vagas', as: :"lista_de_vagas"
 
   #blog | dicas de entrevista
-  get "dicas-de-entrevista", to: 'pages#dicas_de_entrevista', as: :"dicas-de-entrevista"
+  get "blog-posts", to: 'pages#blog_posts', as: :"blog-posts"
 
 
 

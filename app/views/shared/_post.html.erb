@@ -50,21 +50,29 @@ max-width: 800px;
   padding-top: 95%;
 }
 
+.background-img {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,0.9) 0%, rgba(58,57,131,0.8164040616246498) 52%, rgba(51,137,154,0.9) 100%);
+  border-radius: 3px;
+  object-fit: fill
+}
+
 </style>
 
 
-<div style="
+<div
+style="
 background: #0f0c29;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 ">
 
 <div class="photoContainer">
-  <img style="object-fit: fill;" src=<%= @post["photo"] %> alt=<%= @post["title"] %>>
+  <img class="background-img" src=<%= @post["photo"] %> alt=<%= @post["title"] %>>
 </div>
 
 
-<div class="container" style="position: relative; margin-top: -7vh;" >
+<div class="container" style="position: relative; margin-top: -15vh;" >
 
 
 
@@ -74,7 +82,6 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+
 
       <%= image_tag "igf-logo.png", height: 130 %>
       <h3 style="font-size: 2vh;">por Felipe Dias | co-fundador do IGF</h3>
-      <br>
       <h2 style="font-size: 2vh;" class="hide"><%= @post["date"].html_safe%></h2>
       <h1 style="font-size: 4vh;"><%= @post["title"].html_safe%></h1>
       <br>

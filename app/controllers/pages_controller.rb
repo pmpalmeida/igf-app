@@ -101,7 +101,7 @@ class PagesController < ApplicationController
 
 #blog | dicas de entrevista
 
-def dicas_de_entrevista
+def blog_posts
   @posts = posts_all.to_h
   #@firstpost = @posts["ultimo"]
   @secondposts = @posts
