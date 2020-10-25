@@ -90,15 +90,17 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+
 
     <% if !@post["video"].nil? %>
 
-      <h3 style="font-size: 2vh; font-style: italic;">Veja o post completo:</h3>
+      <h3 style="font-size: 2vh; font-style: italic;">Veja o artigo completo:</h3>
       <hr style="margin-top: -0.7vh;">
-      <%= @post["text"].html_safe%>
       <br>
         <% if @post["video"] != " " %>
           <div class="iframe-container-post">
             <iframe src=<%= @post["video"].html_safe%> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         <% end %>
+
+      <br>
+      <%= @post["text"].html_safe%>
 
     <% end %>
     <br>
