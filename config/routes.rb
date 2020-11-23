@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get "politica-de-privacidade", to: 'pages#politicadeprivacidade', as: :"politica-de-privacidade" #politica-de-privacidade
   get "termos-de-uso", to: 'pages#termosdeuso', as: :"termos-de-uso" #termos-de-uso
   get "obrigado", to: 'pages#obrigado', as: :"muito-obrigado" #termos-de-uso
-  get "curriculocampeao", to: 'pages#curriculocampeao', as: :"curriculo-campeao" #bonus 1
+  get "planilha-planejador", to: 'pages#planilhaplanejador', as: :"planilha-planejador" #bonus 1
 
   #paginas de lançamentoo
 

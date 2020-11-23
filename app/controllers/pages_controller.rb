@@ -19,8 +19,8 @@ class PagesController < ApplicationController
     #redirect_to(root_path)
   end
 
-  def curriculocampeao
-    redirect_to(root_path)
+  def planilhaplanejador
+    #redirect_to(root_path)
   end
 
   def termosdeuso

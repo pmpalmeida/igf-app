@@ -142,7 +142,7 @@ color: gray;
 
   <div class="navbar-wagon-right hidden-xs hidden-sm">
     <a href="https://www.youtube.com/channel/UC9l5V9TB0gUGjXxVBjQm6tg?view_as=subscriber" target="_blank"><i class="fab fa-youtube-square icon-style-navbar"></i></a>
-    <a href="https://www.facebook.com/salaodebelezadelivery.com.br" target="_blank"><i class="fab fa-facebook-square icon-style-navbar"></i></a>
+    <a href="https://www.facebook.com/institutoguiafinanceiro/" target="_blank"><i class="fab fa-facebook-square icon-style-navbar"></i></a>
     <a href="https://www.instagram.com/igf_planejadores/" target="_blank"><i class="fab fa-instagram  icon-style-navbar"></i></a>
     <a href="https://twitter.com/thiellefelix" target="_blank"><i class="fab fa-twitter icon-style-navbar hide"></i></a>
     <a href="https://br.linkedin.com/in/thielle" target="_blank"><i class="fab fa-linkedin icon-style-navbar hide"></i></a>
@@ -189,7 +189,7 @@ color: gray;
               <% end %>
             </li>
             <li>
-              <%= link_to curriculo_campeao_path do %>
+              <%= link_to planilha_planejador_path do %>
                 <i class="fa fa-bullhorn"></i>  <%= t(".settings", default: "Recursos") %>
               <% end %>
             </li>
@@ -209,21 +209,21 @@ color: gray;
               <% end %>
             </li>
             <li>
-              <%= link_to "https://www.facebook.com/salaodebelezadelivery.com.br" do %>
+              <%= link_to "https://www.facebook.com/institutoguiafinanceiro/" do %>
                 <i class="fab fa-facebook-square"></i>  <%= t(".settings", default: "Facebook") %>
               <% end %>
             </li>
             <li>
-              <%= link_to "https://www.instagram.com/thiellefelix/" do %>
+              <%= link_to "https://www.instagram.com/igf_planejadores/" do %>
                 <i class="fab fa-instagram "></i>  <%= t(".settings", default: "Instagram") %>
               <% end %>
             </li>
-            <li>
+            <li class="hide">
               <%= link_to "https://br.linkedin.com/in/thielle" do %>
                 <i class="fab fa-linkedin "></i>  <%= t(".settings", default: "LinkedIn") %>
               <% end %>
             </li>
-            <li>
+            <li class="hide">
               <%= link_to "https://twitter.com/thiellefelix" do %>
                 <i class="fab fa-twitter "></i>  <%= t(".settings", default: "Twitter") %>
               <% end %>
