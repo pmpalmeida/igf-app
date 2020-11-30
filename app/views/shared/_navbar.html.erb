@@ -133,7 +133,7 @@ color: gray;
   <!-- Logo -->
 
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "igf-logo.png", height: 40 %>
+    <%= image_tag "igf-logofinal.png", style: 'height: 50px;' %>
   <% end %>
 
   <!-- Right Navigation -->
@@ -183,12 +183,7 @@ color: gray;
                 <i class="fa fa-bullhorn"></i>  <%= t(".settings", default: "Cursos") %>
               <% end %>
             </li>
-            <li>
-              <%= link_to portal_de_vagas_path do %>
-                <i class="fa fa-bullhorn"></i>  <%= t(".settings", default: "Portal de vagas") %>
-              <% end %>
-            </li>
-            <li>
+            <li class="hide">
               <%= link_to planilha_planejador_path do %>
                 <i class="fa fa-bullhorn"></i>  <%= t(".settings", default: "Recursos") %>
               <% end %>
