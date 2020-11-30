@@ -36,6 +36,9 @@ Rails.application.routes.draw do
   #blog | dicas de entrevista
   get "blog-posts", to: 'pages#blog_posts', as: :"blog-posts"
 
+  #live | inscricao nas lives
+  get "live-inscricao", to: 'pages#live_inscricao', as: :"live-inscricao"
+
 
 
 #POSTS---------------------------------------------------------------------------------------------
