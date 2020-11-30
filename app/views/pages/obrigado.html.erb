@@ -4,8 +4,6 @@
 
 <style>
 
-@import url('https://fonts.googleapis.com/css?family=Barriecito&display=swap');
-
 .dot-number {
   font-family: 'Barriecito', cursive;
   color: white;
@@ -42,6 +40,10 @@ background-size: cover;
   height: 200px;
   border-radius: 50%
 }
+
+.zoom:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
 </style>
 
 
@@ -52,17 +54,16 @@ background: linear-gradient(90deg, rgba(2,0,36,0.9) 0%, rgba(58,57,131,0.8164040
 
   <div class="container">
   <br>
-  <br>
   <!--TITLE-->
   <div style="position: relative; color: white;">
     <div class="container">
       <center>
-        <%= image_tag "igf-logo.png", class: 'img-responsive center-block round-img', alt: "Entrevista Descomplicada" %>
-        <h1 class="" style="font-size: 3vh; margin: 2vh;">Obrigado por se inscrever</h1>
-        <p style="font-size: 2vh;">Participe do nosso canal do Telegram, nele postamos conteúdos diários sobre como se tornar um planejador financeiro de sucesso.</p>
+        <%= image_tag "igf-logofinal.png", class: 'img-responsive', style: 'height: 300px;', alt: "Entrevista Descomplicada" %>
+        <h1 class="" style="font-size: 3vh; margin: 0vh;">Obrigado por se inscrever</h1>
+        <h2 style="font-size: 2vh;">Participe do nosso canal do Telegram, nele postamos conteúdos diários sobre como se tornar um planejador financeiro profissional de sucesso.</h2>
         <br>
-        <a href="www.google.com"><i class="fab fa-telegram" style="color: white; font-size: 6vh; margin-top: -2vh;"></i>
-        <p style="font: white;">LINK PARA O TELEGRAM</p>
+        <a href="https://www.google.com/" target="_blank"><i class="fab fa-telegram" style="color: white; font-size: 6vh; margin-top: -2vh;" class="zoom"></i>
+        <p style="color: white;">LINK PARA O TELEGRAM</p>
         </a>
 
 
