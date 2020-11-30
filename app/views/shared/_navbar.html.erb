@@ -146,9 +146,9 @@ color: gray;
     <a href="https://www.instagram.com/igf_planejadores/" target="_blank"><i class="fab fa-instagram  icon-style-navbar"></i></a>
     <a href="https://twitter.com/thiellefelix" target="_blank"><i class="fab fa-twitter icon-style-navbar hide"></i></a>
     <a href="https://br.linkedin.com/in/thielle" target="_blank"><i class="fab fa-linkedin icon-style-navbar hide"></i></a>
-    <%= link_to "Blog", blog_posts_path, class: "navbar-wagon-item-cidade navbar-wagon-link" %>
+    <%= link_to "Blog", blog_posts_path, class: "navbar-wagon-item-cidade navbar-wagon-link hide" %>
     <%= link_to "Cursos", inscricoes_encerradas_path, class: "navbar-wagon-item-cidade navbar-wagon-link" %>
-    <%= link_to "Sobre", sobre_path, class: "navbar-wagon-item-cidade navbar-wagon-link" %>
+    <%= link_to "Sobre", sobre_path, class: "navbar-wagon-item-cidade navbar-wagon-link hide" %>
 
     <%#= link_to "Vídeos", root_path, class: "navbar-wagon-item-cidade navbar-wagon-link" %>
     <%#= link_to "Portal de vagas", portal_de_vagas_path, class: "navbar-wagon-item-cidade navbar-wagon-link" %>
@@ -173,7 +173,7 @@ color: gray;
         <div class="dropdown">
           <i class="fa fa-bars" data-toggle="dropdown"></i>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-            <li class="">
+            <li class="hide">
               <%= link_to blog_posts_path do %>
                 <i class="fa fa-bullhorn"></i>  <%= t(".settings", default: "Blog") %>
               <% end %>

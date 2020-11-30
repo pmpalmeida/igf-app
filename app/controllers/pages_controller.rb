@@ -109,6 +109,11 @@ def blog_posts
 end
 
 
+def live_inscricao
+
+end
+
+
 
   private
 
