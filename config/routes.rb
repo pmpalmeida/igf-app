@@ -44,8 +44,8 @@ Rails.application.routes.draw do
 #POSTS---------------------------------------------------------------------------------------------
 
   get "custo-de-oportunidade", to: 'blog#post0', as: :"custo-de-oportunidade"  #POST 0
-  get "o-futuro-do-salao-de-beleza", to: 'blog#post1', as: :"o-futuro-do-salao-de-beleza" #POST 1
-  get "quais-os-pilares-de-um-bom-curriculo", to: 'blog#post2', as: :"quais-os-pilares-de-um-bom-curriculo" #POST 2
+  get "liberdade-financeira", to: 'blog#post1', as: :"liberdade-financeira" #POST 1
+  get "planejamento-financeiro-pessoal", to: 'blog#post2', as: :"planejamento-financeiro-pessoal" #POST 2
   get "as-5-perguntas-mais-comuns-em-entrevistas", to: 'blog#post3', as: :"as-5-perguntas-mais-comuns-em-entrevistas" #POST 3
   get "como-falar-sobre-qualidades-e-defeitos-em-uma-entrevista-de-trabalho", to: 'blog#post4', as: :"como-falar-sobre-qualidades-e-defeitos-em-uma-entrevista-de-trabalho" #POST 4
   get "como-escrever-seu-curriculo-sem-ter-experiencias-profissionais", to: 'blog#post5', as: :"como-escrever-seu-curriculo-sem-ter-experiencias-profissionais" #POST 5
