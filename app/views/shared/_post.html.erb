@@ -80,10 +80,12 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+
 
     <center>
 
-      <%= image_tag "igf-logo.png", height: 130 %>
-      <h3 style="font-size: 2vh;">por Felipe Dias | co-fundador do IGF</h3>
+      <%= image_tag "igf-logo.png", height: 90 %>
       <h2 style="font-size: 2vh;" class="hide"><%= @post["date"].html_safe%></h2>
-      <h1 style="font-size: 4vh;"><%= @post["title"].html_safe%></h1>
+      <h1 style="font-size: 3vh;"><%= @post["title"].html_safe%></h1>
+      <hr style="font-size: 1.7vh; margin-top: 0px;">
+      <h2 style="font-size: 1.7vh; margin-top: -5px;" class=""><%= @post["date"].html_safe%></h2>
+      <h2 style="font-size: 1.7vh; margin-top: -10px;">por Felipe Dias | co-fundador do IGF</h2>
       <br>
     </center>
 
@@ -100,9 +102,9 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+
         <% end %>
 
       <br>
-      <%= @post["text"].html_safe%>
-
     <% end %>
+    <div style="padding: 3vh;"><%= @post["text"].html_safe%></div>
+
     <br>
     <br>
     <p style="color: black; margin-bottom: 0vh; font-size: 2vh; font-style: italic;">Gostaria de se tornar um planejador financeiro? Saiba mais no link abaixo:</p>
@@ -110,7 +112,7 @@ background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+
 
     <center>
       <%= link_to inscricoes_encerradas_path do %>
-        <div class="btn btn-danger btn-block" style="margin-top: -0.3vh; max-width: 600px;"><i class="fas fa-book-open"></i> Quero me tornar um planejador financeiro</div>
+        <div class="btn btn-danger btn-block" style="margin-top: -0.3vh; max-width: 600px;">Quero me tornar um planejador financeiro</div>
       <% end %>
     </center>
     <br>
