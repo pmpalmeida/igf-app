@@ -15,22 +15,27 @@ class BlogController < ApplicationController
   end
 
   def post3
+    redirect_to(blog_posts_path)
      @post = posts_all[3]
   end
 
   def post4
+    redirect_to(blog_posts_path)
      @post = posts_all[4]
   end
 
   def post5
+    redirect_to(blog_posts_path)
      @post = posts_all[5]
   end
 
   def post6
+    redirect_to(blog_posts_path)
      @post = posts_all[6]
   end
 
   def post7
+    redirect_to(blog_posts_path)
      @post = posts_all[7]
   end
 
