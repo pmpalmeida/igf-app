@@ -43,7 +43,7 @@ Rails.application.routes.draw do
 
 #POSTS---------------------------------------------------------------------------------------------
 
-  get "transformacoes-que-atraves-da-beleza-sao-entregues-em-produtos-de-varios-formatos", to: 'blog#post0', as: :"transformacoes-que-atraves-da-beleza-sao-entregues-em-produtos-de-varios-formatos"  #POST 0
+  get "custo-de-oportunidade", to: 'blog#post0', as: :"custo-de-oportunidade"  #POST 0
   get "o-futuro-do-salao-de-beleza", to: 'blog#post1', as: :"o-futuro-do-salao-de-beleza" #POST 1
   get "quais-os-pilares-de-um-bom-curriculo", to: 'blog#post2', as: :"quais-os-pilares-de-um-bom-curriculo" #POST 2
   get "as-5-perguntas-mais-comuns-em-entrevistas", to: 'blog#post3', as: :"as-5-perguntas-mais-comuns-em-entrevistas" #POST 3
