@@ -40,7 +40,7 @@ class PagesController < ApplicationController
   end
 
   def lan_live
-    redirect_to(root_path)
+    #redirect_to(root_path)
     #https://pay.hotmart.com/thanks?bid=1582468627395
   end
 
