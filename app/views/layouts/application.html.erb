@@ -66,12 +66,19 @@
 
   </head>
   <body>
-    <%= render 'shared/navbar' %>
+
+    <% if action_name != "lan_inscricao" %>
+      <% if action_name != "lan_live" %>
+        <%= render 'shared/navbar' %>
+      <% end %>
+    <% end %>
     <%= render 'shared/flashes' %>
     <%= yield %>
     <%= render 'shared/footer' %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
+
+
 
   </body>
 </html>
