@@ -68,7 +68,9 @@
   <body>
 
     <% if action_name != "lan_inscricao" %>
-      <%= render 'shared/navbar' %>
+      <% if action_name != "lan_live" %>
+        <%= render 'shared/navbar' %>
+      <% end %>
     <% end %>
     <%= render 'shared/flashes' %>
     <%= yield %>
