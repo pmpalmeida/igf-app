@@ -63,6 +63,9 @@ Rails.application.routes.draw do
   get "vaga-733", to: 'vagas#vaga5', as: :"vaga6"  #vaga100 - 5
 
 
+  #TRAFEGO--------------------------------------------------------------------------------------------
+
+  get "typ-expert", to: 'pages#typ_expert', as: :"typ-expert"
 
 
 end

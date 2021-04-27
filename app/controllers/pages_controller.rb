@@ -57,6 +57,11 @@ class PagesController < ApplicationController
 
   end
 
+  def typ_expert
+    redirect_to("https://fabulous-speaker-1598.ck.page/90032856a5/thanks")
+
+  end
+
   #PORTAL DE VAGAS
   def portal_de_vagas
     redirect_to(root_path)
