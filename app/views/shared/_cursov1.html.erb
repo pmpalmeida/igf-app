@@ -1,0 +1,72 @@
+
+
+<style>
+
+
+
+
+.bullet-title2 {
+  color: white;
+  font-size: 5vh;
+  line-height: 1.4;
+}
+
+.bullet-item {
+  font-weight: 300;
+  color: white;
+  line-height: 2;
+  font-size: 2.2vh;
+  letter-spacing: 1px;
+
+
+}
+
+.bullet-ementa {
+  color: black;
+  padding-right: 4vh;
+  padding-left: 4vh;
+  font-weight: bold;
+}
+
+.background-oque {
+  background-color: #FFFFFF;
+  opacity: 1;
+  background-size: 20px 20px;
+  background-image: repeating-linear-gradient(45deg, #f8fcfe 0, #f8fcfe 2px, #FFFFFF 0, #FFFFFF 50%);
+}
+
+</style>
+
+
+
+
+<!-- SEÇÃO EMENTA-->
+<div class="background-oque">
+<div class="container ">
+  <br>
+  <center>
+  <h3 class="bullet-title2" style="color: black;">O que você vai aprender no curso de formação de Planejador Financeiro Pessoal do IGF?</h3>
+  <br>
+
+  <%= image_tag "ementacurso.jpg", class: 'img-responsive center-block', alt: "Instituto Guia Financeiro" %>
+
+  <!-- CARD COM LINK DE COMPRA -->
+    <div style="background-color: white; border-radius: 3px; max-width: 800px; padding: 1.5vh; margin: 1vh; margin-top: 0vh; letter-spacing: 1px;">
+    <center>
+      <h2 style="font-size: 2.2vh; font-weight: bold; line-height: 1.5;">Faça parte do curso <br> <spam style="font-size: 4vh;">Guia Financeiro<spam></h2>
+      <h3 style="font-size: 2vh; margin-top: 1vh; letter-spacing: 0px;">De <spam style="text-decoration: line-through;">R$2927</spam> por R$1927 ou em até 12x de R$160,58</h3>
+      <%= link_to "Quero ser planejador", "https://pay.hotmart.com/U16126935I?hideBillet=1", class: "btn btn-primary btn-lg"%>
+      <br>
+      <%= link_to "Inscreva-se", "https://pay.hotmart.com/U16126935I?hideBillet=1"%>
+    </center>
+    </div>
+<!-- FIM: CARD COM LINK DE COMPRA -->
+</center>
+
+
+
+
+</div>
+<br>
+</div>
+<!--FIM: EMENTA-->
