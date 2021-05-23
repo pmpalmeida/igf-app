@@ -59,7 +59,7 @@ class PagesController < ApplicationController
   end
 
   def inscricoes_encerradas
-
+    redirect_to(lan_inscricao_path)
   end
 
   def typ_expert
