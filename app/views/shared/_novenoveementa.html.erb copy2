@@ -1,0 +1,67 @@
+
+
+<style>
+
+.background-ementa {
+background: #0f0c29;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+padding: 3vh; z-index: 10; position:relative; color: gray;">
+}
+
+
+.bullet-title {
+  color: white;
+  font-size: 3vh;
+  line-height: 1.4;
+}
+
+.bullet-item {
+  font-weight: 300;
+  color: #b8c1c8;
+  line-height: 2;
+  font-size: 2.2vh;
+  letter-spacing: 1px;
+}
+
+
+
+
+</style>
+
+
+
+<!-- SEÇÃO EMENTA-->
+<div class="background-ementa">
+
+
+<div class="container" style="z-index: 1;">
+  <div class="row">
+
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <h3  style="color: white; font-size: 3vh; line-height: 1.4;">Porque se tornar um planejador financeiro pessoal, a profissão do futuro segundo a Infomoney?</h3>
+      <br>
+      <%= image_tag "dezprofissoes2.png", class: "img-responsive max-gif-size", style: "border-radius: 3px" %>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <h3 class="bullet-title">Vantangens de ser um planejador financeiro pessoal:</h3>
+      <div class="bullet-item">
+        <p style="margin-bottom: 2.4vh;"> <spam style="font-size: 3vh; font-weight: bold;">1. </spam> Gostaria de uma renda extra no final do mês? Sim, você pode ganhar até R$ 12.500 por mês como planejador financeiro pessoal</p>
+        <p style="margin-bottom: 2.4vh;"> <spam style="font-size: 3vh; font-weight: bold;">2. </spam> Procura uma mudança de carreira atuando fora do mundo corporativo? Equilibre sua vida pessoal e profissional sem sacrificar sua remuneração atuando como planejador(a)</p>
+        <p style="margin-bottom: 2.4vh;"> <spam style="font-size: 3vh; font-weight: bold;">3. </spam> Está muito tempo fora do mercado de trabalho? Volte a trabalhar montando sua carteira de clientes e ofertando planejamento financeiro</p>
+        <p style="margin-bottom: 2.4vh;"> <spam style="font-size: 3vh; font-weight: bold;">4. </spam> Seja seu próprio chefe! Trabalhe no seu ritmo, sem chefes ou política corporativa, com sua carteira de clientes</p>
+        <p style="margin-bottom: 2.4vh;"> <spam style="font-size: 3vh; font-weight: bold;">5. </spam> Quer satisfação profissional? Ajude outras pessoas a se planejar e a viver uma vida mais feliz com segurança financeira e seja remunerado(a) por isso</p>
+    </div>
+
+
+    </div>
+
+
+
+  </div>
+
+</div>
+<br>
+</div>
+<!--FIM: EMENTA-->

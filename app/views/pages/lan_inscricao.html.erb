@@ -1,11 +1,6 @@
-
-
-
-
 <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
-
 
 .background {
 background-color: #0e5f99;
@@ -20,6 +15,31 @@ background-size: cover;
 }
 
 
+
+
+.custom-shape-divider-bottom-1668966753 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1668966753 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-bottom-1668966753 .shape-fill {
+    fill: #302B63;
+}
+
+
+
 </style>
 
 
@@ -30,7 +50,7 @@ background: linear-gradient(90deg, rgba(36,120,93,0.7497373949579832) 0%, rgba(5
 
   <div class="container">
   <!--TITLE-->
-  <div style="position: relative; color: white;">
+  <div style="position: relative; color: white;  font-family: 'Roboto', sans-serif;">
     <div class="container">
       <center>
         <%= image_tag "patylomonaco.jpeg", style: 'border-radius: 50%; max-width: 200px; margin-top: 3vh; margin-bottom: 3vh;', alt: "Instituto Guia Financeiro" %>
@@ -54,20 +74,28 @@ background: linear-gradient(90deg, rgba(36,120,93,0.7497373949579832) 0%, rgba(5
     <br>
   </div>
   <!-- TITLE END-->
+
+
+
   </div>
 
 
+
 </div>
+
+
+
+</div>
+
+
+<div class="custom-shape-divider-bottom-1668966753">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
+    </svg>
 </div>
 
 
 <%= render 'shared/novenoveementa' %>
-
-<%= render 'shared/oqueaprender' %>
-
-<%= render 'shared/quemsomos' %>
-
-<%= render 'shared/depoimentos' %>
 
 
 </div>
